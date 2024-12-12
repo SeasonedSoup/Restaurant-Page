@@ -1,18 +1,66 @@
 * {
     color: white;
+    margin: 0;
+    box-sizing: border-box;
     
 }
 body {
     background-color: black;
-    display: flex;
-    justify-content: center;
 }
 
 nav {
     display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 button {
     background-color: gainsboro;
     color: red;
+}
+
+header {
+    background-color: red;
+    width: 100vw;
+    height: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 20px;
+}
+
+#content {
+    background: url(hellBackground.jpg) no-repeat center / cover;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.h1 {
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.hellImage {
+    border: 3px solid burlywood ;
+}
+
+.box {
+    background-color: brown;
+    border: 3px solid black;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+}
+
+footer {
+    background-color: red;
+    width: 100vw;
+    height: 20px;
+    display: flex;
+    justify-content: center;
 }

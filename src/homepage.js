@@ -1,5 +1,6 @@
 import hellImg from './hell.jpeg';
-
+    
+const content = document.getElementById('content');
 
 
 export function loadHomepage() {
@@ -15,8 +16,7 @@ export function loadHomepage() {
     
     const callToAction = document.createElement('div');
     callToAction.textContent = "The restaurant is well known for taking the suffering and pain within every single person stuck in this Hell Loop and use it as delicious culinary stuff like idk hot wings and carolina reaper cuisines!!! ";
-    
-    const content = document.getElementById('content');
+
     content.appendChild(restaurant);
     content.appendChild(img);
     content.appendChild(desc);

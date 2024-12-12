@@ -1,8 +1,26 @@
 console.log("ITS WORKING!");
 
-import "./styles.css";
-import { loadHomepage, loadMenuPage, loadContactPage } from "./homepage.js";
+function resetContent() {
+    const content = document.getElementById('content')
+    content.innerHTML = '';
+}
 
+import "./styles.css";
+import { homeButton, menuButton, contactButton } from "./tablogic.js";
+import { loadHomepage, loadMenuPage, loadContactPage } from "./homepage.js";
+//default
 loadHomepage();
-loadMenuPage();
-loadContactPage();
+homeButton.addEventListener('click', () => {
+    resetContent();
+    loadHomepage();
+})
+
+menuButton.addEventListener('click', () => {
+    resetContent();
+    loadMenuPage();
+})
+
+contactButton.addEventListener('click', () => {
+    resetContent();
+   loadContactPage();
+})

@@ -1,0 +1,18 @@
+* {
+    color: white;
+    
+}
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+}
+
+button {
+    background-color: gainsboro;
+    color: red;
+}

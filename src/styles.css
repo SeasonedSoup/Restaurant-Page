@@ -2,7 +2,6 @@
     color: white;
     margin: 0;
     box-sizing: border-box;
-    
 }
 body {
     background-color: black;
@@ -17,8 +16,8 @@ nav {
 }
 
 button {
-    display: flex;               /* Use flexbox */
-    justify-content: center;     /* Center horizontally */
+    display: flex;               
+    justify-content: center;     
     align-items: center; 
     background-color: pink;
     color: red;

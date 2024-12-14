@@ -41,15 +41,21 @@ export function loadMenuPage() {
     menu.textContent = "Inferno Menu";
 
     const mainDish = document.createElement('div');
+    const h1 = document.createElement('h1');
+    h1.textContent = 'Main Dishes';
+    mainDish.appendChild(h1);
+
     const p = document.createElement('p');
-    p.textContent = 'Main Dishes';
+    p.textContent = 'Spicy Chicken ';
     mainDish.appendChild(p);
+
   
 
     const img = document.createElement('img');
     img.classList.add('chickenImage');
     img.src = chickenImg;
-    img.alt = 'spicy chicken'
+    img.alt = 'spicy chicken';
+
     mainDish.appendChild(img);
 
     const sideDish = document.createElement('div');

@@ -11,18 +11,26 @@ body {
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
+    height: 100%;
 }
 
 button {
-    background-color: gainsboro;
+    display: flex;               /* Use flexbox */
+    justify-content: center;     /* Center horizontally */
+    align-items: center; 
+    background-color: pink;
     color: red;
+    height: 30px;
+    border-radius: 15px;
+    padding: 15px;
 }
 
 header {
     background-color: red;
     width: 100vw;
-    height: 20px;
+    height: 40px;
 }
 
 .container {

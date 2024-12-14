@@ -1,5 +1,5 @@
 import hellImg from './hell.jpeg';
-    
+import chickenImg from './images/chicken.jpeg'
 const content = document.getElementById('content');
 
 
@@ -25,11 +25,14 @@ export function loadHomepage() {
     const hours = document.createElement('div');
     hours.classList.add('box');
     
+    const eternal = document.createElement('p');
+    hours.appendChild
     hours.textContent = "Hours"
     content.appendChild(restaurant);
     content.appendChild(img);
     content.appendChild(desc);
     content.appendChild(callToAction);
+    content.appendChild(hours);
 };
 
 export function loadMenuPage() {
@@ -38,7 +41,16 @@ export function loadMenuPage() {
     menu.textContent = "Inferno Menu";
 
     const mainDish = document.createElement('div');
-    mainDish.textContent = 'Main Dishes';
+    const p = document.createElement('p');
+    p.textContent = 'Main Dishes';
+    mainDish.appendChild(p);
+  
+
+    const img = document.createElement('img');
+    img.classList.add('chickenImage');
+    img.src = chickenImg;
+    img.alt = 'spicy chicken'
+    mainDish.appendChild(img);
 
     const sideDish = document.createElement('div');
     sideDish.textContent = 'Sides';

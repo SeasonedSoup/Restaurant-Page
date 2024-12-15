@@ -35,28 +35,35 @@ export function loadHomepage() {
     content.appendChild(hours);
 };
 
+function createMenuItem(name, description, imgLink) {
+    const menuItem = document.createElement('div');
+    menuItem.classList.add('menu-item');
+
+    const menuName = document.createElement('h1');
+    menuName.textContent  = name;
+
+    const menuDesc = document.createElement('h3');
+    menuDesc.textContent = description;
+
+    const menuImg = document.createElement('img');
+    menuImg.classList.add('menu-img')
+    menuImg.src = imgLink
+
+    menuItem.appendChild(menuName);
+    menuItem.appendChild(menuDesc);
+    menuItem.appendChild(menuImg);
+
+    return menuItem;
+}
+
 export function loadMenuPage() {
     const menu = document.createElement('div');
     menu.classList.add('h1');
     menu.textContent = "Inferno Menu";
 
     const mainDish = document.createElement('div');
-    const h1 = document.createElement('h1');
-    h1.textContent = 'Main Dishes';
-    mainDish.appendChild(h1);
 
-    const p = document.createElement('p');
-    p.textContent = 'Spicy Chicken ';
-    mainDish.appendChild(p);
-
-  
-
-    const img = document.createElement('img');
-    img.classList.add('chickenImage');
-    img.src = chickenImg;
-    img.alt = 'spicy chicken';
-
-    mainDish.appendChild(img);
+    mainDish.appendChild(createMenuItem('Spicy Chicken', 'Fiery poultry from the depths of hell', chickenImg));
 
     const sideDish = document.createElement('div');
     sideDish.textContent = 'Sides';

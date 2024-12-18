@@ -1,5 +1,11 @@
+
 import hellImg from './hell.jpeg';
 import chickenImg from './images/chicken.jpeg'
+import pizzaImg from './images/hellPizza.jpg'
+import friesImg from './images/hellFries.jpeg'
+import jalapenoImg from './images/jalapeno.jpeg'
+import poopImg from './images/poop.jpeg'
+
 const content = document.getElementById('content');
 
 
@@ -56,23 +62,67 @@ function createMenuItem(name, description, imgLink) {
     return menuItem;
 }
 
+function createInfo(job, contact, email) {
+    const infoItem = document.createElement('div');
+    infoItem.classList.add('info-item');
+
+    const infoJob = document.createElement('p');
+    infoJob.textContent = job;
+
+    const infoContact = document.createElement('p');
+    infoContact.textContent = contact;
+
+    const infoEmail = document.createElement('p');
+    infoEmail.textContent = email;
+
+    infoItem.appendChild(infoJob);
+    infoItem.appendChild(infoContact);
+    infoItem.appendChild(infoEmail);
+
+    return infoItem;
+}
+
 export function loadMenuPage() {
     const menu = document.createElement('div');
     menu.classList.add('h1');
     menu.textContent = "Inferno Menu";
 
     const mainDish = document.createElement('div');
+    const mainDishHeader = document.createElement('h2');
+    mainDishHeader.classList.add('menuHeader');
+    mainDishHeader.textContent = 'Main Dish';
+    //header
+    mainDish.appendChild(mainDishHeader);
 
     mainDish.appendChild(createMenuItem('Spicy Chicken', 'Fiery poultry from the depths of hell', chickenImg));
+    mainDish.appendChild(createMenuItem('Inferno Pizza', 'HELL PIZZA this one has pineapple in it and a bunch of spicy stuff', pizzaImg))
 
     const sideDish = document.createElement('div');
-    sideDish.textContent = 'Sides';
+    const sidesHeader = document.createElement('h2');
+    sidesHeader.classList.add('menuHeader');
+    sidesHeader.textContent = 'Sides';
+
+    sideDish.appendChild(sidesHeader)
+
+    sideDish.appendChild(createMenuItem('Eternal Fries', 'Fries taht will eternally burn up even after consuming', friesImg))
 
     const beverages = document.createElement('div');
-    beverages.textContent = 'Beverages';
+    const bevHeader = document.createElement('h2');
+    bevHeader.classList.add('menuHeader');
+    bevHeader.textContent = 'Beverages';
+    
+    beverages.appendChild(bevHeader);
+
+    beverages.appendChild(createMenuItem('Jalapeno Juice', 'Jalapeno Juice what the heeeelll', jalapenoImg))
 
     const deserts = document.createElement('div');
-    deserts.textContent = 'Deserts';
+    const desertsHeader = document.createElement('h2');
+    desertsHeader.classList.add('menuHeader');
+    desertsHeader.textContent = 'Deserts';
+
+    deserts.appendChild(desertsHeader);
+
+    deserts.appendChild(createMenuItem('Crap Cake', 'A Wonderful desert for the craps you get in life', poopImg))
 
     content.appendChild(menu);
     content.appendChild(mainDish);
@@ -89,12 +139,19 @@ export function loadContactPage() {
 
     const lucifer  = document.createElement('div');
     lucifer.textContent = 'Lucifer';
+    lucifer.classList.add('center')
+    lucifer.appendChild(createInfo('Owner', '0875-666-342', 'devdoesnotexist@realemail.com'))
 
     const demon = document.createElement('div');
     demon.textContent = 'Random Demon 666';
+    demon.classList.add('center')
+    demon.appendChild(createInfo('Chef and Waiter', 'no number', 'eternallyworking@fakeemail.com'))
+
 
     const jared = document.createElement('div');
     jared.textContent = 'Jared'
+    jared.classList.add('center')
+    jared.appendChild(createInfo('Website Maker, Advertiser', '1111-333-2222', 'becomfortablewithbeinguncomfortable@fremail.com'))
 
     content.appendChild(contact);
     content.appendChild(lucifer);

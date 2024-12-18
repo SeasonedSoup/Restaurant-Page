@@ -1,10 +1,20 @@
+
 * {
     color: white;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body {
     background-color: black;
+}
+
+
+html, body {
+    height: 100%; /* Full viewport height */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Makes layout vertical */
 }
 
 nav {
@@ -34,9 +44,10 @@ header {
 
 .container {
     display: flex;
+    flex: 1; 
     justify-content: center;
-    height: 100vh;
     margin: 20px;
+    overflow-y: auto;
 }
 
 #content {
@@ -66,8 +77,15 @@ header {
 
 footer {
     background-color: red;
-    width: 100vw;
+    width: 100%;
     height: 20px;
     display: flex;
     justify-content: center;
+    margin-top: auto; 
+}
+
+.menuHeader {
+    background-color: black;
+    color: red;
+    padding: 10px;
 }
